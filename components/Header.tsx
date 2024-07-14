@@ -7,12 +7,12 @@ import MobileNav from './MobileNav'
 
 export default function Header() {
 	return (
-		<header className="py xl:py-12 text-white">
+		<header className="py-8 xl:py-12 text-white">
 			<div className="container mx-auto flex justify-between items-center">
 				{/* logo */}
 				<Link href="/">
 					<h1 className="text-4xl font-semibold">
-						Catana<span className="text-[#57C5DC]">.</span>
+						Catana<span className="text-[#f0ca59]">.</span>
 					</h1>
 				</Link>
 				{/* desktop nav & hire me button */}
