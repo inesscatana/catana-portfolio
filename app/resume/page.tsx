@@ -42,7 +42,7 @@ interface ListItemProps {
 }
 
 const ListItem = ({ children }: ListItemProps) => (
-	<li className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+	<li className="bg-[#272c36] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
 		{children}
 	</li>
 )
@@ -55,7 +55,7 @@ interface TooltipIconProps {
 const TooltipIcon = ({ icon, name }: TooltipIconProps) => (
 	<TooltipProvider delayDuration={100}>
 		<Tooltip>
-			<TooltipTrigger className="bg-[#232329] items-center group">
+			<TooltipTrigger className="bg-[#272c36] items-center group">
 				<span className="text-lg group-hover:text-accent transition-all duration-300">
 					{icon}
 				</span>
@@ -75,7 +75,7 @@ const TooltipSkill = ({ skill }: TooltipSkillProps) => (
 	<li>
 		<TooltipProvider delayDuration={100}>
 			<Tooltip>
-				<TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+				<TooltipTrigger className="w-full h-[150px] bg-[#272c36] rounded-xl flex justify-center items-center group">
 					<div className="text-6xl group-hover:text-accent transition-all duration-300">
 						{skill.icon}
 					</div>
