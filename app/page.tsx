@@ -1,5 +1,4 @@
 import React, { memo } from 'react'
-import { Button } from '@/components/ui/button'
 import { FiDownload } from 'react-icons/fi'
 
 // components
@@ -12,7 +11,7 @@ const TextSection = () => (
 		<h1 className="h1 mb-6">
 			Hello! I'm
 			<br />
-			<span className="text-[#f0ca59] font-bold">Inês Catana</span>
+			<span className="text-[#f0ca59] font-bold">Inês Catana</span>.
 		</h1>
 		<p className="max-w-[500px] mb-9 text-white/80">
 			I'm a <span className="font-bold">Frontend developer</span> with{' '}
@@ -28,14 +27,14 @@ const TextSection = () => (
 )
 
 const DownloadButton = () => (
-	<Button
-		variant="outline"
-		size="lg"
-		className="uppercase flex items-center gap-2"
+	<a
+		className="group focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer justify-center rounded-full font-semibold border border-[#f0ca59] bg-transparent text-[#f0ca59] h-[56px] px-8 tracking-[2px] uppercase flex items-center gap-2"
+		href="/assets/cv_ines_catana.pdf"
+		download
 	>
-		<span>Download CV</span>
-		<FiDownload className="text-xl" />
-	</Button>
+		Download CV
+		<FiDownload className="text-xl group-hover:translate-y-1 transition" />
+	</a>
 )
 
 const SocialLinks = () => (
