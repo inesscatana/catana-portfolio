@@ -21,7 +21,7 @@ const config = {
 			xl: '1200px',
 		},
 		fontFamily: {
-			primary: 'var(--font-jetBrainsMono)',
+			primary: 'var(--font-poppins)',
 		},
 		extend: {
 			colors: {

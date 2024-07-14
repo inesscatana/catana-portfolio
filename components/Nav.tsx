@@ -16,8 +16,8 @@ export default function Nav() {
 						key={index}
 						className={`${
 							link.path === pathName &&
-							'text-[#57C5DC] border-b-2 border-[#57C5DC]'
-						} capitalize font-medium hover:text-[#57C5DC] transition-all`}
+							'text-[#f0ca59] border-b-2 border-[#f0ca59]'
+						} capitalize font-medium hover:text-[#f0ca59] transition-all`}
 					>
 						{link.name}
 					</Link>
