@@ -304,12 +304,12 @@ export const educationData = {
 		},
 		{
 			institution: 'Code for All_',
-			degree: 'Fullstack Developer',
+			degree: 'FullStack Programming Bootcamp',
 			duration: '2019-2019',
 		},
 		{
 			institution: 'ETIC',
-			degree: 'Web Development',
+			degree: 'Web Development Course',
 			duration: '2014 - 2015',
 		},
 		{
