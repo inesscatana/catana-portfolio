@@ -1,5 +1,9 @@
 import React from 'react'
+
 import {
+	FaPhoneAlt,
+	FaEnvelope,
+	FaMapMarkerAlt,
 	FaHtml5,
 	FaCss3,
 	FaJs,
@@ -50,6 +54,24 @@ export const links = [
 	{
 		name: 'contact',
 		path: '/contact',
+	},
+] as const
+
+export const info = [
+	{
+		icon: React.createElement(FaPhoneAlt),
+		title: 'Phone',
+		description: '(+351) 91 859 2011',
+	},
+	{
+		icon: React.createElement(FaEnvelope),
+		title: 'Email',
+		description: 'ines.arts@hotmail.com',
+	},
+	{
+		icon: React.createElement(FaMapMarkerAlt),
+		title: 'Address',
+		description: 'Lisbon, Portugal',
 	},
 ] as const
 
