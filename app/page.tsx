@@ -11,7 +11,7 @@ const TextSection = () => (
 		<h1 className="h1 mb-6">
 			Hello! I'm
 			<br />
-			<span className="text-[#f0ca59] font-bold">Inês Catana</span>.
+			<span className="text-accent font-bold">Inês Catana</span>.
 		</h1>
 		<p className="max-w-[500px] mb-9 text-white/80">
 			I'm a <span className="font-bold">Frontend developer</span> with{' '}
@@ -28,7 +28,7 @@ const TextSection = () => (
 
 const DownloadButton = () => (
 	<a
-		className="group focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer justify-center rounded-full font-semibold border border-[#f0ca59] bg-transparent text-[#f0ca59] h-[56px] px-8 tracking-[2px] uppercase flex items-center gap-2"
+		className="group focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer justify-center rounded-full font-semibold border border-accent bg-transparent text-accent h-[56px] px-8 tracking-[2px] uppercase flex items-center gap-2"
 		href="/assets/cv_ines_catana.pdf"
 		download
 	>
@@ -41,7 +41,7 @@ const SocialLinks = () => (
 	<div className="mb-8 xl:mb-0">
 		<Social
 			containerStyles="flex gap-6"
-			iconStyles="w-9 h-9 border border-[#f0ca59] rounded-full flex justify-center items-center text-[#f0ca59] text-base hover:bg-[#f0ca59] hover:text-primary hover:transition-all duration-500"
+			iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
 		/>
 	</div>
 )

@@ -12,7 +12,7 @@ export default function Header() {
 				{/* logo */}
 				<Link href="/">
 					<h1 className="text-4xl font-semibold">
-						Catana<span className="text-[#f0ca59]">.</span>
+						Catana<span className="text-accent">.</span>
 					</h1>
 				</Link>
 				{/* desktop nav & hire me button */}

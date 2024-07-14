@@ -1,6 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
+
+// components
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
 	Tooltip,
@@ -9,6 +11,7 @@ import {
 	TooltipTrigger,
 } from '@/components/ui/tooltip'
 import { ScrollArea } from '@/components/ui/scroll-area'
+
 import {
 	aboutData,
 	experiencesData,
@@ -53,7 +56,7 @@ const TooltipIcon = ({ icon, name }: TooltipIconProps) => (
 	<TooltipProvider delayDuration={100}>
 		<Tooltip>
 			<TooltipTrigger className="bg-[#232329] items-center group">
-				<span className="text-lg group-hover:text-[#f0ca59] transition-all duration-300">
+				<span className="text-lg group-hover:text-accent transition-all duration-300">
 					{icon}
 				</span>
 			</TooltipTrigger>
@@ -73,7 +76,7 @@ const TooltipSkill = ({ skill }: TooltipSkillProps) => (
 		<TooltipProvider delayDuration={100}>
 			<Tooltip>
 				<TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-					<div className="text-6xl group-hover:text-[#f0ca59] transition-all duration-300">
+					<div className="text-6xl group-hover:text-accent transition-all duration-300">
 						{skill.icon}
 					</div>
 				</TooltipTrigger>
@@ -116,7 +119,7 @@ const Resume = () => {
 									<ul className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 										{experiencesData.items.map((item, index) => (
 											<ListItem key={index}>
-												<span className="text-[#f0ca59]">{item.duration}</span>
+												<span className="text-accent">{item.duration}</span>
 												<h3 className="text-xl max-w-[260px] text-center lg:text-left">
 													{item.position}
 												</h3>
@@ -148,7 +151,7 @@ const Resume = () => {
 									<ul className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 										{educationData.items.map((item, index) => (
 											<ListItem key={index}>
-												<span className="text-[#f0ca59]">{item.duration}</span>
+												<span className="text-accent">{item.duration}</span>
 												<h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
 													{item.degree}
 												</h3>
