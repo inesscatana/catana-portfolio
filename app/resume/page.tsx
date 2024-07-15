@@ -32,7 +32,9 @@ const SectionContent = ({
 }: SectionContentProps) => (
 	<div className="flex flex-col gap-8 text-center xl:text-left">
 		<h3 className="text-4xl font-bold">{title}</h3>
-		<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{description}</p>
+		<p className="max-w-[600px] text-primary/60 dark:text-white/60 mx-auto xl:mx-0">
+			{description}
+		</p>
 		{children}
 	</div>
 )
@@ -42,7 +44,7 @@ interface ListItemProps {
 }
 
 const ListItem = ({ children }: ListItemProps) => (
-	<li className="bg-[#272c36] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+	<li className="bg-[#f1f2f4] dark:bg-[#272c36] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
 		{children}
 	</li>
 )
@@ -55,7 +57,7 @@ interface TooltipIconProps {
 const TooltipIcon = ({ icon, name }: TooltipIconProps) => (
 	<TooltipProvider delayDuration={100}>
 		<Tooltip>
-			<TooltipTrigger className="bg-[#272c36] items-center group">
+			<TooltipTrigger className="items-center group">
 				<span className="text-lg group-hover:text-accent transition-all duration-300">
 					{icon}
 				</span>
@@ -75,7 +77,7 @@ const TooltipSkill = ({ skill }: TooltipSkillProps) => (
 	<li>
 		<TooltipProvider delayDuration={100}>
 			<Tooltip>
-				<TooltipTrigger className="w-full h-[150px] bg-[#272c36] rounded-xl flex justify-center items-center group">
+				<TooltipTrigger className="w-full h-[150px] bg-[#F1F2F4] dark:bg-[#272c36] rounded-xl flex justify-center items-center group">
 					<div className="text-6xl group-hover:text-accent transition-all duration-300">
 						{skill.icon}
 					</div>
@@ -124,7 +126,9 @@ const Resume = () => {
 													{item.position}
 												</h3>
 												<div className="flex items-center gap-3">
-													<p className="text-white/60">{item.company}</p>
+													<p className="text-primary/60 dark:text-white/60">
+														{item.company}
+													</p>
 												</div>
 												<div className="flex items-center gap-1">
 													{item.icon.map((icon, iconIndex) => (
@@ -156,7 +160,9 @@ const Resume = () => {
 													{item.degree}
 												</h3>
 												<div className="flex items-center">
-													<p className="text-white/60">{item.institution}</p>
+													<p className="text-primary/60 dark:text-white/60">
+														{item.institution}
+													</p>
 												</div>
 											</ListItem>
 										))}
@@ -194,7 +200,9 @@ const Resume = () => {
 											key={index}
 											className="flex items-center justify-center xl:justify-start gap-4"
 										>
-											<span className="text-white/60">{item.fieldName}</span>
+											<span className="text-primary/60 dark:text-white/60">
+												{item.fieldName}
+											</span>
 											<span className="text-xl">{item.fieldValue}</span>
 										</li>
 									))}

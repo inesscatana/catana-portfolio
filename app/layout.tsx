@@ -7,6 +7,9 @@ import './globals.css'
 import Header from '@/components/Header'
 import PageTransition from '@/components/PageTransition'
 import StairTransition from '@/components/StairTransition'
+import ThemeSwitch from '@/components/ThemeSwitch'
+
+import ThemeContextProvider from '@/context/theme-context'
 
 const poppins = Poppins({
 	subsets: ['latin'],
@@ -26,10 +29,15 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={poppins.className}>
+			<body
+				className={`${poppins.className} bg-gray-50 text-primary dark:bg-primary dark:text-white dark:text-opacity-90}`}
+			>
 				<StairTransition />
-				<Header />
-				<PageTransition>{children}</PageTransition>
+				<ThemeContextProvider>
+					<Header />
+					<ThemeSwitch />
+					<PageTransition>{children}</PageTransition>
+				</ThemeContextProvider>
 			</body>
 		</html>
 	)

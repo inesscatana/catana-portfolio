@@ -13,7 +13,7 @@ const TextSection = () => (
 			<br />
 			<span className="text-accent font-bold">Inês Catana</span>.
 		</h1>
-		<p className="max-w-[500px] mb-9 text-white/80">
+		<p className="max-w-[500px] mb-9 text-primary/80 dark:text-white/80">
 			I'm a <span className="font-bold">Frontend developer</span> with{' '}
 			<span className="font-bold">8 years</span> of experience and I'm also a{' '}
 			<span className="font-bold">teacher.</span> I enjoy building{' '}
@@ -28,7 +28,7 @@ const TextSection = () => (
 
 const DownloadButton = () => (
 	<a
-		className="group focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer justify-center rounded-full font-semibold border border-accent bg-transparent text-accent h-[56px] px-8 tracking-[2px] uppercase flex items-center gap-2"
+		className="group focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer justify-center rounded-full font-semibold border border-accent bg-accent text-primary dark:text-primary dark:bg-accent h-[56px] px-8 tracking-[2px] uppercase flex items-center gap-2"
 		href="/assets/cv_ines_catana.pdf"
 		download
 	>
@@ -41,7 +41,7 @@ const SocialLinks = () => (
 	<div className="mb-8 xl:mb-0">
 		<Social
 			containerStyles="flex gap-6"
-			iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
+			iconStyles="w-9 h-9 border border-accent bg-transparent text-accent rounded-full flex justify-center items-center text-base hover:bg-accent hover:text-primary dark:hover:bg-accent dark:hover:text-primary hover:transition-all duration-500"
 		/>
 	</div>
 )

@@ -13,26 +13,26 @@ export default function Photo() {
 					transition: { delay: 2, duration: 0.4, ease: 'easeIn' },
 				}}
 			>
-				{/* image */}
+				{/* Image */}
 				<motion.div
 					initial={{ opacity: 0 }}
 					animate={{
 						opacity: 1,
 						transition: { delay: 2.4, duration: 0.4, ease: 'easeInOut' },
 					}}
-					className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
+					className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] dark:mix-blend-lighten absolute"
 				>
 					<Image
 						src="/assets/profile-photo.png"
 						priority
 						quality={100}
 						fill
-						alt=""
+						alt="profile-photo"
 						className="object-contain"
 					/>
 				</motion.div>
 
-				{/* circle */}
+				{/* Circle */}
 				<motion.svg
 					className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
 					fill="transparent"
