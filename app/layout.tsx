@@ -18,7 +18,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-	title: 'Inês Catana | Personal Portfolio',
+	title: 'Inês Catana',
 	description: 'Software Developer with 8+ years of experience.',
 }
 
