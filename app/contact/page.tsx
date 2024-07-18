@@ -1,13 +1,15 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import toast from 'react-hot-toast'
 
 // components
-import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
+import SubmitBtn from '@/components/SubmitBtn'
 
 import { info } from '@/lib/data'
+import { sendEmail } from '@/actions/sendEmail'
 
 const Contact = () => {
 	return (
@@ -23,30 +25,49 @@ const Contact = () => {
 				<div className="flex flex-col xl:flex-row gap-[30px]">
 					{/* Form Section */}
 					<div className="xl:w-[54%] order-2 xl:order-none">
-						<form className="flex flex-col gap-6 p-10  bg-[#F1F2F4] dark:bg-[#272c36] rounded-xl">
+						<form
+							className="flex flex-col gap-6 p-10  bg-[#F1F2F4] dark:bg-[#272c36] rounded-xl"
+							action={async (formData) => {
+								const { data, error } = await sendEmail(formData)
+
+								if (error) {
+									toast.error(error)
+									return
+								}
+
+								toast.success('Email sent successfully!')
+							}}
+						>
 							<h3 className="text-4xl text-accent font-medium">
 								Let's work together
 							</h3>
 							<p className="text-primary/60 dark:text-white/60">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-								nihil sapiente pariatur id totam.
+								Please contact me directly at{' '}
+								<a className="underline" href="mailto:example@gmail.com">
+									ines.arts@hotmail.com
+								</a>{' '}
+								or through this form.
 							</p>
 							{/* Grid for Inputs */}
-							<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-								<Input type="firstname" placeholder="First Name" />
-								<Input type="lastname" placeholder="Last Name" />
-								<Input type="email" placeholder="Email address" />
-								<Input type="phone" placeholder="Phone number" />
+							<div className="grid gap-6">
+								<Input
+									name="senderEmail"
+									type="email"
+									placeholder="Your email"
+									required
+									maxLength={500}
+								/>
 							</div>
 							{/* Textarea for message */}
 							<Textarea
 								className="h-[200px]"
-								placeholder="Type your message here."
+								name="message"
+								placeholder="Your message"
+								required
+								maxLength={5000}
 							/>
 							{/* Button to submit */}
-							<Button size="md" className="max-w-40">
-								Send message
-							</Button>
+							<SubmitBtn />
 						</form>
 					</div>
 					{/* Information Section */}

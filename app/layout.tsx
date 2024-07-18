@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
+import { Toaster } from 'react-hot-toast'
 
 import './globals.css'
 
@@ -35,6 +36,7 @@ export default function RootLayout({
 				<StairTransition />
 				<ThemeContextProvider>
 					<Header />
+					<Toaster position="top-right" />
 					<ThemeSwitch />
 					<PageTransition>{children}</PageTransition>
 				</ThemeContextProvider>
