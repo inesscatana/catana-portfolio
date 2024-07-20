@@ -6,8 +6,6 @@ import './globals.css'
 
 // components
 import Header from '@/components/Header'
-import PageTransition from '@/components/PageTransition'
-import StairTransition from '@/components/StairTransition'
 import ThemeSwitch from '@/components/ThemeSwitch'
 
 import ThemeContextProvider from '@/context/theme-context'
@@ -33,12 +31,11 @@ export default function RootLayout({
 			<body
 				className={`${poppins.className} bg-gray-50 text-primary dark:bg-primary dark:text-white dark:text-opacity-90}`}
 			>
-				<StairTransition />
 				<ThemeContextProvider>
 					<Header />
+					{children}
 					<Toaster position="top-right" />
 					<ThemeSwitch />
-					<PageTransition>{children}</PageTransition>
 				</ThemeContextProvider>
 			</body>
 		</html>
