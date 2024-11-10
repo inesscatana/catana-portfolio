@@ -132,7 +132,7 @@ export const experiencesData = {
 		},
 		{
 			duration: '2022 - Present',
-			position: 'Frontend Lead Developer',
+			position: 'Lead Frontend Developer',
 			company: 'DEUS: human(ity)-centered AI',
 			icon: [
 				React.createElement(FaHtml5),

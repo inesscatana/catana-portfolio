@@ -7,17 +7,17 @@ import Photo from '@/components/Photo'
 
 const TextSection = () => (
 	<div className="text-center xl:text-left order-2 xl:order-none">
-		<span className="text-xl">Software Developer</span>
+		<span className="text-xl">Senior Frontend Enginner</span>
 		<h1 className="h1 mb-6">
 			Hello! I'm
 			<br />
 			<span className="text-accent font-bold">Inês Catana</span>.
 		</h1>
 		<p className="max-w-[500px] mb-9 text-primary/80 dark:text-white/80">
-			I'm a <span className="font-bold">Frontend developer</span> with{' '}
-			<span className="font-bold">8 years</span> of experience and I'm also a{' '}
-			<span className="font-bold">teacher.</span> I enjoy building{' '}
-			<span className="italic">sites & apps</span>.
+			I'm a <span className="font-bold">Frontend Enginner</span> with{' '}
+			<span className="font-bold">9 years</span> of experience and a{' '}
+			<span className="font-bold">dedicated teacher, </span> who is always
+			learning.
 		</p>
 		<div className="flex flex-col xl:flex-row items-center gap-8">
 			<DownloadButton />

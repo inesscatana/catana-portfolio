@@ -203,7 +203,7 @@ const Resume = () => {
 											<span className="text-primary/60 dark:text-white/60">
 												{item.fieldName}
 											</span>
-											<span className="text-xl">{item.fieldValue}</span>
+											<span className="text-lg">{item.fieldValue}</span>
 										</li>
 									))}
 								</ul>
