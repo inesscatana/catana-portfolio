@@ -91,7 +91,7 @@ export const aboutData = {
 		},
 		{
 			fieldName: 'Experience',
-			fieldValue: '8+ Years',
+			fieldValue: '9 Years',
 		},
 		{
 			fieldName: 'Nationality',
@@ -414,3 +414,27 @@ export const skillsData = {
 		},
 	],
 } as const
+
+// Projects
+export const projects = [
+	{
+		num: '01',
+		category: 'frontend',
+		title: 'project 1',
+		description:
+			'SaaS app with AI-powered features like text-to-multiple-voices functionality and AI-generated images with Next.js 14 and Convex.',
+		stack: [
+			{ name: 'NextJS' },
+			{ name: 'ReactJS' },
+			{ name: 'Typescript' },
+			{ name: 'TailwindCSS' },
+			{ name: 'ShadcnUI' },
+			{ name: 'OpenAI' },
+			{ name: 'Convex' },
+			{ name: 'Clerk' },
+		],
+		image: '/assets/project1.png',
+		live: 'https://ai-podcaster-app.vercel.app/',
+		github: 'https://github.com/inesscatana/ai-podcast-app',
+	},
+]
